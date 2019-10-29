@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-tab": "vant-weapp/tab",
+    "van-tabs": "vant-weapp/tabs",
+    "van-steps": "vant-weapp/steps",
+    "van-search": "vant-weapp/search"
+  },
+    "navigationBarBackgroundColor": "#87BF82",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "预约"
+}

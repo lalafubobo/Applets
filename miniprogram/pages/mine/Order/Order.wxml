@@ -1,0 +1,38 @@
+<van-tabs active="{{ active }}" color="#87BF82">
+  <van-tab title="待收货">
+  <view class="page">
+  <view class="page-middle">
+  <view class="middle-image"><image class="order" src="../../../images/appointment-3.png" mode="aspectFit" ></image></view>
+  <view class="middle-wz-big">您还没有相关的订单</view>
+  <view class="middle-wz-small">可以去首页看看哦</view>
+  </view>
+  </view>
+  </van-tab>
+  <van-tab title="代金券">
+  <view class="page">
+  <view class="page-middle">
+  <view class="middle-image"><image class="order" src="../../../images/appointment-3.png" mode="aspectFit" ></image></view>
+  <view class="middle-wz-big">您还没有相关的订单</view>
+  <view class="middle-wz-small">可以去首页看看哦</view>
+  </view>
+  </view>
+  </van-tab>
+  <van-tab title="待取件">
+  <view class="page">
+  <view class="page-middle">
+  <view class="middle-image"><image class="order" src="../../../images/appointment-3.png" mode="aspectFit" ></image></view>
+  <view class="middle-wz-big">您还没有相关的订单</view>
+  <view class="middle-wz-small">可以去首页看看哦</view>
+  </view>
+  </view>
+  </van-tab>
+  <van-tab title="待评价">
+  <view class="page">
+  <view class="page-middle">
+  <view class="middle-image"><image class="order" src="../../../images/appointment-3.png" mode="aspectFit" ></image></view>
+  <view class="middle-wz-big">您还没有相关的订单</view>
+  <view class="middle-wz-small">可以去首页看看哦</view>
+  </view>
+  </view>
+  </van-tab>
+</van-tabs>

@@ -1,0 +1,432 @@
+.cover_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1;
+  color: #fff;
+}
+
+.exchange_box {
+  width: 100%;
+  height: 700rpx;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: #fff;
+  padding: 20rpx;
+}
+.top{
+  z-index: 99;
+/* 
+ margin-top:-300rpx;  */
+}
+.exchange_box.kind {
+  height: 200rpx;
+}
+
+.buy_box .num .set {
+  display: inline-block;
+  height: 40rpx;
+  width: 60rpx;
+  text-align: center;
+  line-height: 40rpx;
+  border: 1px solid #444;
+  margin-right: 2rpx;
+  border-radius: 8rpx;
+}
+
+.exchange {
+  margin: 0 0 0 600rpx;
+}
+
+.name {
+  background: rgb(255, 254, 254);
+  border-radius: 75rpx;
+  width: 150rpx;
+  height: 150rpx;
+  margin: -90rpx auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hmj {
+  margin-top: 90rpx;
+}
+
+.box {
+  width: 100%;
+  height: 400rpx;
+}
+
+.u-wrp-bnr {
+  width: 100%;
+  height: 400rpx;
+  display: block;
+  position: relative;
+  background: #f0f0f0;
+}
+
+.u-img-slide {
+  width: 100%;
+  height: inherit;
+}
+
+.rule {
+  font-size: 40rpx;
+  margin: 0 0 0 285rpx;
+}
+
+.activity {
+  height: 400rpx;
+  width: 90%;
+  margin: 30rpx 0 0 5%;
+  border-radius: 30px;
+}
+
+.imagesize {
+  display: flex;
+  justify-content: center;
+}
+
+.imagesize image {
+  width: 100%;
+}
+
+.van-cell__label {
+  width: 400rpx;
+  height: 70rpx;
+}
+
+.txt {
+  z-index: 999;
+  text-align: center;
+}
+
+.aaa {
+  height: 60rpx;
+  line-height: 90rpx;
+  font-size: 35rpx;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 90%;
+  height: 440rpx;
+  margin: 20rpx auto;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.zong {
+  height: 70rpx;
+  width: 85%;
+  margin: 15rpx auto;
+}
+
+.infor {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section1 {
+  height: 60rpx;
+  font-size: 30rpx;
+  float: right;
+  width: 460rpx;
+  border: solid rgba(0, 0, 0, 0.2) 1px;
+  border-radius: 5px;
+  margin-top: 20rpx;
+}
+
+.section2 {
+  height: 60rpx;
+  font-size: 30rpx;
+  float: right;
+  width: 460rpx;
+  border: solid rgba(0, 0, 0, 0.2) 1px;
+  border-radius: 5px;
+  margin-top: 20rpx;
+}
+
+.section3 {
+  height: 60rpx;
+  font-size: 30rpx;
+  float: right;
+  width: 460rpx;
+  border: solid rgba(0, 0, 0, 0.2) 1px;
+  border-radius: 5px;
+  margin-top: 20rpx;
+}
+
+.section4 {
+  height: 60rpx;
+  font-size: 30rpx;
+  float: right;
+  width: 460rpx;
+  border: solid rgba(0, 0, 0, 0.2) 1px;
+  border-radius: 5px;
+  margin-top: 20rpx;
+}
+
+.section5 {
+  height: 60rpx;
+  font-size: 30rpx;
+  float: right;
+  width: 460rpx;
+  border: solid rgba(0, 0, 0, 0.2) 1px;
+  border-radius: 5px;
+  margin-top: 20rpx;
+}
+
+.login-btn {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.btn-hover {
+  position: relative;
+  top: 3rpx;
+  box-shadow: 0px 0px 8px #999 inset;
+}
+
+.plain-hover {
+  position: relative;
+  top: 3rpx;
+  box-shadow: 0px 0px 10px #bbbec4 inset;
+}
+
+/**加入我们**/
+
+.wenzi {
+  font-size: 18px;
+}
+
+.lkj {
+  font-size: 16px;
+}
+
+.hw {
+  background-color: white;
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+}
+
+.aa {
+  background-color: white !important;
+}
+
+.lq {
+  padding: 0rpx !important;
+   margin-left: 570rpx !important;
+}
+
+/* 弹窗 */
+
+.hmj {
+  text-align: center;
+}
+
+.orderDetails {
+  background: #fff;
+  height: 160rpx;
+}
+
+.orderListTitle {
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #f3f3f3;
+}
+
+.orderListTitle .orderStatus {
+  float: right;
+  margin-right: 20rpx;
+  color: #2f7b27;
+  font-size: 34rpx;
+}
+
+.orderListDetails {
+  margin: 10px;
+  display: flex;
+  height: 150rpx;
+  border-bottom: 1rpx solid #f3f3f3;
+  border: 2px solid #87bf82;
+  border-radius: 20rpx;
+}
+
+.orderListDetails .productInfo {
+  flex: 1.5;
+  padding: 0 10rpx;
+  text-align: center;
+}
+
+.pr {
+  flex: 2.6;
+  padding: 0 10rpx;
+  line-height: 44rpx;
+}
+
+.n {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  display: inline-block;
+  line-height: 40rpx;
+  font-weight: 900;
+  overflow: hidden;
+}
+
+.less {
+  font-size: 25rpx;
+  position: relative;
+  top: -90rpx;
+  left: 220rpx;
+  color: #ccc;
+  width: 150rpx;
+}
+
+.y {
+  font-size: 102rpx;
+  font-weight: 900;
+  color: #87bf82;
+}
+
+.x {
+  color: #87bf82;
+  font-size: 38rpx;
+  font-weight: 900;
+}
+
+.hh {
+  font-weight: 800;
+  color: #87bf82;
+  flex: 1.3;
+  text-align: center;
+  border-left: 1px dashed #ccc;
+}
+
+.hb {
+  width: 100%;
+  margin-top: 55rpx;
+  font-size: 40rpx;
+  border-radius: 4rpx;
+}
+
+.hb2 {
+  width: 100%;
+  margin-top: 55rpx;
+  font-size: 36rpx;
+  border-radius: 4rpx;
+  color: #999;
+}
+
+.cell {
+  margin: 5rpx !important;
+}
+
+.bon {
+  margin-top: 10rpx !important;
+  width: 600rpx !important;
+  margin-left: 100rpx;
+}
+
+/*热门活动*/
+
+.active-top {
+  margin-top: 10rpx;
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.active-top-left {
+  margin-left: 26rpx;
+  font-family: '微软雅黑';
+  font-size: 30rpx;
+}
+
+.active-top-right {
+  font-family: '微软雅黑';
+  font-size: 24rpx;
+  margin-right: 30rpx;
+  color: #999;
+}
+
+.active-coment {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  padding-top: 10rpx;
+}
+
+.active-coment-img {
+  width: 20%;
+  height: 150rpx;
+  margin-left:-30rpx;
+  /* margin: 5rpx 30rpx; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.active-coment-wz{
+  width: 40%;
+  margin-left: -40rpx;
+} 
+
+.Title {
+  margin-left:20rpx;
+  font-size: 32rpx;
+  line-height: 80rpx;
+}
+
+.content {
+  margin-left:20rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.active-jz {
+  width: 100%;
+  text-align: right;
+  font-size: 28rpx;
+  color: #87bf82;
+  background-color: white;
+  margin-bottom: 10rpx;
+}
+
+.boo {
+  width: 90%;
+  margin: 0 auto;
+  /* border-bottom: 2rpx solid rgb(182, 182, 182); */
+}
+
+.jz {
+  margin-right: 15rpx;
+  line-height: 80rpx;
+}
+.aaa{
+  height: 600rpx;
+}
+ .field{
+  height: 500rpx;
+} 
+.ig{
+ border-radius: 75rpx;
+  width: 150rpx;
+  height: 150rpx;
+}

@@ -1,0 +1,116 @@
+<!--miniprogram/pages/firstpage/firstpage.wxml-->
+<view class='box'>
+  <swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
+    <block wx:for="{{bnrUrl}}" wx:for-index="index" wx:key="{{index}}">
+      <swiper-item>
+        <image src='{{item.url}}' class='u-img-slide' mode='aspectFill'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<van-tabs active="{{ active }}" color="#87bf82" >
+  <van-tab title="优惠专区">
+    <view class="hw" wx:for="{{Coupon}}" wx:key="{{index}}">
+      <view wx:for="{{vouNum}}" wx:for-item="itemVouNum" wx:key="key">
+      <view wx:if="{{item.shopID == itemVouNum.shopID}}">
+      <van-panel title="{{item.shopName}}" desc="总计{{itemVouNum.category}}种优惠券，速速领取" status="还剩{{ itemVouNum.num }}张" use-footer-slot>
+        <view slot="footer">
+          <van-button size="small" type="primary" custom-class="lq" bindtap="showBuyModal" data-shopid="{{item.shopID}}" >立即领取</van-button>
+        </view>
+      </van-panel>
+      </view>
+    </view>
+    </view>
+    <view class="cover_screen" bindtap="hideBuyModal" wx:if="{{showModalStatus}}"></view>
+
+    <!-- 点击立即领取 弹窗 -->
+    <view animation="{{animationData}}" class="exchange_box"  wx:if="{{showModalStatus}}" wx:key="key">
+     <block  wx:for="{{Coupon}}" wx:key="{{index}}"> 
+ <!-- <view  class="top" >  -->
+      <view class="name" wx:if="{{item.shopID==shopid}}" wx:key="{{index}}">
+        <image class="ig" src="{{item.shopPic}}" mode="aspectFill"></image>
+      </view>
+
+      <view class="hmj"  wx:if="{{item.shopID==shopid}}">
+        <text>{{item.shopName}}</text>
+      </view>  
+               </block>
+      <scroll-view scroll-y='true' class="field">
+      <view wx:for="{{vou}}" wx:for-item="itemVou" wx:key="{{key}}">
+      <view  wx:if="{{itemVou.shopID==shopid}}">
+        <view class="orderDetails" >
+          <view class="orderListDetails">
+            <view class="productInfo">
+              <text class="x">¥</text>
+              <text class="y">{{itemVou.rmbValue}}</text>
+            </view>
+            <view class="pr">
+              <text class="n">{{itemVou.featherValue}}羽毛值</text>
+            </view>
+            <view class="hh" bindtap="getvou" data-type="{{itemVou.type}}" data-id="{{itemVou.cashCouponID}}">
+              <view class="hb" wx:if='{{itemVou.type==0}}'>领取</view>
+              <view class="hb2" wx:if="{{itemVou.type==1}}">已领取</view>
+            </view>
+          </view>
+          <view class="less">还剩{{itemVou.number}}张</view>
+        </view>
+        </view>
+      </view>
+      </scroll-view>
+ </view>
+        
+  </van-tab>
+
+<van-tab title="鸡毛换糖">
+    <view class="hw" wx:for="{{goods}}" wx:key="{{index}}">
+      <van-card tag="{{item.goodsTag}}" price="{{item.rmbValue}}羽毛值" desc="{{item.goodsIntro}}" title="{{item.goodsName}}" thumb="{{item.goodsPicture}}" custom-class="aa">
+        <view slot="footer">
+          <van-button size="mini" type="danger" bindtap="look">查看详情</van-button>
+        </view>
+      </van-card>
+    </view>
+  </van-tab>
+
+  <van-tab title="热门活动" >
+
+    <view class="active-top">
+      <text class="active-top-left">进行中的活动</text>
+      <text class="active-top-right">共{{actives.length}}个</text>
+    </view>
+    <view wx:for="{{actives}}" wx:key="{{index}}">
+      <view class="active-coment"  bindtap="jumpActive" data-img="{{item.activePic}}" data-id="{{item.activeID}}">
+        <view class="active-coment-img">
+          <image src="{{item.activePic}}" style="width:300rpx; height:160rpx; "></image>
+        </view>
+        <view class="active-coment-wz">
+          <view class="Title">{{item.activeTitle}}</view>
+          <view class="content">{{item.activeContent}}</view>
+        </view>
+      </view>
+      <view class="active-jz">
+        <view class="boo">
+          <text class="jz">{{item.activeState}}</text>
+        </view>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="加入我们">
+    <van-notice-bar mode="closeable" left-icon="volume-o" text="为花椒-正青春-敢出众,零技巧！零基础！这里有你想不到的机遇！只需动动手指,开启新的征程！" /> 
+    <view class="select_box_four">
+      <van-cell-group>
+        <view class="cell" ><!--wx:for="{{cells}}" wx:key="{{index}}"-->
+          <!-- <van-field required clearable label="{{item.name}}" left-icon="{{item.icon}}" placeholder="{{item.placeholder}}"    bind:blur="onChange" value="{{username}}"/> -->
+          <van-field id="username" required clearable label="姓名" left-icon="user-o" placeholder="请输入你的姓名"    bind:blur="onChange" value="{{username}}"/>
+           <van-field  id="grander" required clearable label="性别" left-icon="friends-o" placeholder="请输入你的性别"    bind:blur="onChange" value="{{grander}}"/>
+            <van-field id="tel" required clearable label="电话" left-icon="phone-o" placeholder="请输入你的电话"    bind:blur="onChange" value="{{tel}}"/>
+              <van-field id="qq" required clearable label="qq" left-icon="envelop-o" placeholder="请输入你的qq号码"    bind:blur="onChange" value="{{qq}}"/>
+              <van-field id="address" required clearable label="地址" left-icon="wap-home" placeholder="请输入你的地址"    bind:blur="onChange" value="{{address}}"/>
+        </view>
+      </van-cell-group>
+
+      <van-button type="primary" size="large" round="true" custom-class="bon" bindtap="submit">
+        提交
+      </van-button>
+    </view>
+  </van-tab>
+</van-tabs>

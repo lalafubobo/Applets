@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+  
+  },
+  "navigationBarBackgroundColor": "#87BF82",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "关于鸡毛糖糖"
+}

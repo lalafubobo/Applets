@@ -1,0 +1,197 @@
+<!--pages/myInfo/myInfo.wxml-->
+<view class="set_color">
+<view class="background">
+<view class="background_view">
+  <view class='wave_1'></view>
+  <view class='wave_2'></view>
+</view>
+</view>
+<view class="value">{{featherValue}}</view>
+
+<view class="customer">
+<open-data type="userAvatarUrl" class="c1"></open-data>
+<view class="c2"><open-data type="userNickName" class="userNickName"></open-data></view>
+<view bindtap='qiandao' class="c3"><text class="c123">签到打卡</text></view>
+</view>
+
+<view class='container'>
+  <view class='icon-group'>
+  <image class="icon" src="../../images/gain.png" bindtap='switchWaitGoods' data-id="1"></image>
+  <image class="icon" src="../../images/coupon.png" bindtap='switchCashCoupon' data-id="2"></image>
+  <image class="icon" src="../../images/pick.png" bindtap='switchWaitPickup' data-id="3"></image>
+   <image class="icon" src="../../images/assess.png" bindtap='switchWaitA' data-id="4"></image>
+    <image class="icon" src="../../images/service.png"  bindtap='switchWaitB'></image>
+  </view>
+  <view class='button-group'>
+    <text class='like-button  {{ (switchButtonTF.switchWaitGoods) ? "button-active" : "" }}' bindtap='switchWaitGoods' data-id="1">待收获</text>
+    <text class='like-button {{ (switchButtonTF.switchCashCoupon) ? "button-active" : "" }}' bindtap='switchCashCoupon' data-id="2">代金券</text>
+    <text class='like-button {{ (switchButtonTF.switchWaitPickup) ? "button-active" : "" }}' bindtap='switchWaitPickup' data-id="3">待取件</text>
+    <text class='like-button  {{ (switchButtonTF.switchWaitA) ? "button-active" : "" }}' bindtap='switchWaitA' data-id="4">待评价</text>
+    <text class='like-button {{ (switchButtonTF.switchWaitB) ? "button-active" : "" }}' bindtap='switchWaitB'>售后</text>
+  </view>
+
+
+
+ <!-- 等待商品的块 -->
+  <view wx:if='{{ (switchViewTF.switchWaitGoods) ? true : false }}' animation='{{ejectWaitGoodsAnim}}'class="swit" >
+    <!-- 可能有多个块 下面的view只是一个示例 需要多个 则复制多个下面的块 -->
+    <view class='wait-goods-card'>
+      <view class='goods-pic-modle'></view>
+      <view class='goods-name'>商品1</view>
+      <view class='change-info'>
+        <view class='change-success'>交易成功</view>
+        <view class='value-yumaozhi'>40羽毛值</view>
+        <view class='goods-num'>x1</view>
+      </view>
+    </view>
+    <view class='wait-goods-card'>
+      <view class='goods-pic-modle'></view>
+      <view class='goods-name'>商品2</view>
+      <view class='change-info'>
+        <view class='changing'>交易中</view>
+        <view class='value-yumaozhi'>80羽毛值</view>
+        <view class='goods-num'>x2</view>
+      </view>
+    </view>
+  </view>
+  <!-- 代金券 -->
+  <view wx:if='{{ (switchViewTF.switchCashCoupon) ? true : false }}' class='cash-coupon 
+view-card' animation="{{ ejectCashCouponAnim}}" class="swit" >
+
+<!-- 你这段代码有问题  你看看 不行的话你告诉我怎么改 我重新设计 记得要是要我设计把对应的CSS代码也删干净 -->
+    <!-- <view class="cash-coupon-card">
+      <view class="can-use">
+        <view class="a-cash-coupon">
+          <view class="shop">
+            <view class="shop-name">店铺1</view>
+          </view>
+          <view class="cash-name">代金券</view>
+          <view class="money-info">
+            <view class="value-money">￥16</view>
+            <view class="use-date-limted">使用期限<text class="use-date-limted-text">3天
+
+</text></view>
+          </view>
+        </view>
+        <view class="a-cash-coupon">
+          <view class="shop">
+            <image class="shop-pic" src="/images/timg.jpg"></image>
+            <view class="shop-name">店铺2</view>
+          </view>
+          <view class="new-cash-coupon">新品菜名</view>
+          <view class="cash-name">新品</view>
+          <view class="money-info">
+            <view class="value-money">￥24</view>
+            <view class="use-date-limted">使用期限<text class="use-date-limted-text">1天
+
+</text></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="out-limted-cash-coupon">已过期</view>
+    <view class="cash-coupon-card">
+      <view class="out-time">
+        <view class="a-cash-coupon">
+          <view class="shop">
+            <image class="shop-pic" src="/images/test1.jpeg"></image>
+            <view class="shop-name">店铺1</view>
+          </view>
+          <view class="cash-name">代金券</view>
+          <view class="money-info">
+            <view class="value-money">￥16</view>
+            <view class="use-date-limted">使用期限<text class="use-date-limted-text">0天
+
+</text></view>
+          </view>
+        </view>
+      </view>
+    </view> -->
+
+
+  </view>
+
+  <!-- 等待取件 -->
+  <view wx:if='{{ (switchViewTF.switchWaitPickup) ? true : false }}' class='wait-pickup 
+
+view-card' animation="{{ ejectWaitPickupAnim }}" class="swit" >
+    <view class="wait-pickup-cards">
+      <view class="wait-pickup-card">
+        <view class="wait-pickup-card-title">可爱的xxx小花椒</view>
+        <view class="order-time">预约时间: 2019-09-22 13:00</view>
+        <view class="order-state">预约状态: 预约成功！</view>
+        <view class="order-text">鸡毛糖糖将于预约时间一小时前提醒您哦！</view>
+        <view class="deal-time">交易时间：2019-09-22 9：00</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 评价和售后（待修改） -->
+ <view wx:if='{{ (switchViewTF.switchWaitA) ? true : false }}' animation='{{ejectWaitAAnim}}'class="swit" >
+    <!-- 可能有多个块 下面的view只是一个示例 需要多个 则复制多个下面的块 -->
+    <view class='wait-goods-card'>
+      <view class='goods-pic-modle'></view>
+      <view class='goods-name'>商品1</view>
+      <view class='change-info'>
+        <view class='change-success'>交易成功</view>
+        <view class='value-yumaozhi'>40羽毛值</view>
+        <view class='goods-num'>x1</view>
+      </view>
+    </view>
+    <view class='wait-goods-card'>
+      <view class='goods-pic-modle'></view>
+      <view class='goods-name'>商品2</view>
+      <view class='change-info'>
+        <view class='changing'>交易中</view>
+        <view class='value-yumaozhi'>80羽毛值</view>
+        <view class='goods-num'>x2</view>
+      </view>
+    </view>
+  </view>
+
+   <view wx:if='{{ (switchViewTF.switchWaitB) ? true : false }}' animation='{{ejectWaitBAnim}}'class="swit" >
+    <view class='wait-goods-card'>
+      <view class='goods-pic-modle'></view>
+      <view class='goods-name'>商品1</view>
+      <view class='change-info'>
+        <view class='change-success'>交易成功</view>
+        <view class='value-yumaozhi'>40羽毛值</view>
+        <view class='goods-num'>x1</view>
+      </view>
+    </view>
+    <view class='wait-goods-card'>
+      <view class='goods-pic-modle'></view>
+      <view class='goods-name'>商品2</view>
+      <view class='change-info'>
+        <view class='changing'>交易中</view>
+        <view class='value-yumaozhi'>80羽毛值</view>
+        <view class='goods-num'>x2</view>
+      </view>
+    </view>
+  </view>
+
+
+ <!--底部list-->
+<view wx:if="{{ !(switchViewTF.switchWaitGoods ||  switchViewTF.switchCashCoupon ||  switchViewTF.switchWaitPickup ||  switchViewTF.switchWaitA ||  switchViewTF.switchWaitB) }}" class="bottom">
+
+<view bindtap="go" class="mybottom">
+<text class="anotherway">我的羽毛发展史</text>
+<view class="words">查看我的羽毛详情</view>
+</view>
+
+<view bindtap="goto" class="mybottom">
+<text class="anotherway">我的消息</text>
+<view class="words">祝您中秋节快乐！</view>
+</view>
+
+<view bindtap="gotous" class="mybottom">
+<text class="anotherway">关于鸡毛糖糖</text>
+<view class="words">这是一群可爱的朋友！</view>
+</view>
+</view>
+</view>
+
+
+
+

@@ -1,0 +1,33 @@
+<view class='main'>
+  <!--正面的框  -->
+  <view class="box b1" animation="{{animationMain}}" bindtap='rotateFn' data-id="1">
+    <image src="../../../images/jiji.png" class="bimg"></image>
+  </view>
+  <!--背面的框  -->
+  <view class="box b2" animation="{{animationBack}}" bindtap='rotateFn' data-id="2" >
+    <scroll-view scroll-y='true' style='height:100%'>
+    <view class="triangle-right"></view>
+      <text class="tx">内容简介\n</text>
+      <view class="text">
+        <text>鸡毛糖糖是一帮年轻有活力、有创造的花椒人！ 我们坚信废品有价值，通过换取的新颖方式倡导【废品零抛弃，花椒更美丽！】的核心理念。同时，废品科普、废品改造、垃圾分类也是我们的奋斗目标，亦是鸡毛糖糖的动力之源！\n</text>
+
+      </view>
+      <view class="divLine"></view>
+      <image src="../../../images/555.jpg" class="img"></image>
+      <view class="triangle-right"></view>
+      <text class="tx">你的收获\n</text>
+      <view class="text">
+        <text>可爱的花椒学子们，此次环保之行不仅能够收获一个干净整洁的寝室，换取的羽毛值还有意外的惊喜哟!\n1.获得环保小卫士奖状可加科创分\n2.换取食堂代金券\n3.兑换各类精美物品\n4.羽毛值提现\n</text>
+      </view>
+      <view class="divLine"></view>
+      <image src="../../../images/555.jpg" class="img"></image>
+      <view class="triangle-right"></view>
+      <text class="tx">联系方式\n</text>
+      <view class="text">
+        <text>QQ:1294063677\n手机：17346715741</text>
+      </view>
+      <view class="divLine"></view>
+      <image src="../../../images/555.jpg" class="img"></image>
+    </scroll-view>
+  </view>
+</view>

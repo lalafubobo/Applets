@@ -1,0 +1,23 @@
+<!--pages/firstpage/activeDetails/activeDetails.wxml-->
+<view class="pageImages"><image class="image1"src="{{imagesId}}" mode="scaleToFill"></image></view>
+<view class="divide">
+<view class="divide-left"></view>
+<view class="divide-wz">活动详情</view>
+<view class="divide-right"></view>
+</view>
+<view class="activeDetails"><image class="image2" src="../../../images/hb.jpg" mode="scaleToFill"></image></view>
+<view class="divide">
+<view class="divide-left"></view>
+<view class="divide-wz">活动报名</view>
+<view class="divide-right"></view>
+</view>
+<view class="activeJoin">
+<view class="activeJoin-content">
+<van-cell-group>
+  <van-field id="username" required clearable label="姓名" left-icon="user-o" placeholder="请输入你的姓名"    bind:blur="onChange" value="{{username}}"/>
+           <van-field id="tel" required clearable label="电话" left-icon="phone-o" placeholder="请输入你的电话"    bind:blur="onChange" value="{{tel}}"/>
+              <van-field id="qq" required clearable label="qq" left-icon="envelop-o" placeholder="请输入你的qq号码"    bind:blur="onChange" value="{{qq}}"/>
+</van-cell-group>
+<button type="primary" bindtap="submit">提交</button>
+</view>
+</view>

@@ -1,0 +1,29 @@
+
+ <view class="timeLine-top">发展历程</view>
+ <view class="timeLine-top-e">CONMPANY HISTORY</view>
+
+ <view class="timeLine-content" wx:for="{{yumaoTimeLine}}" wx:key="{{index}}">
+ <view class="content-left">
+ <view class="content-date-1"  wx:if="{{item.id%2==0}}">
+  <view class="circle-1"></view>
+ <view class="data-1">{{item.time}}</view>
+ </view>
+ <view class="content-date-2"  wx:if="{{item.id%2!=0}}">
+ <view class="content-describe-1">
+ <view class="content-describe-1-wz">{{item.event}}，{{item.value}}</view>
+ </view>
+ </view>
+ </view>
+  <view class="content-right">
+  <view class="content-date-1" wx:if="{{item.id%2==0}}">
+   <view class="content-describe-2" >
+    <view class="content-describe-2-wz">{{item.event}}，{{item.value}}</view>
+   </view>
+  </view>
+  <view class="content-date-2" wx:if="{{item.id%2!=0}}">
+  <view class="circle-2"></view>
+  <view class="data-2"  >{{item.time}}</view>
+  </view>
+  </view>
+  
+ </view>

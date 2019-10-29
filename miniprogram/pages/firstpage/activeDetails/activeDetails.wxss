@@ -1,0 +1,62 @@
+/* pages/firstpage/activeDetails/activeDetails.wxss */
+.pageImages{
+  width: 95%;
+  margin: 10rpx auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image1{
+  width: 100%;
+}
+.image2{
+  height: 100%;
+}
+.activeDetails{
+  margin: 10rpx auto;
+  width: 95%;
+  height: 1200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.activeJoin{
+  margin: 0 auto;
+  width: 95%;
+  height: 400rpx;
+  /* border: 5rpx solid #87bf82; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.activeJoin-content{
+  width: 90%;
+  height: 90%;
+  /* border: 2rpx solid #87bf82; */
+}
+button{
+  margin-top:15rpx;
+  background-color: #87bf82 !important;
+}
+.divide{
+  margin: 15rpx auto;
+  width: 95%;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.divide-left{
+  width: 40%;
+  border-bottom: 5rpx solid #87bf82;
+}
+.divide-wz{
+  width: 20%;
+  color: rgb(119, 119, 119);
+  font-size: 32rpx;
+  text-align: center;
+}
+.divide-right{
+  width: 40%;
+  border-bottom: 5rpx solid #87bf82;
+}

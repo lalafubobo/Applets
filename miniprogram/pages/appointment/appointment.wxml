@@ -1,0 +1,114 @@
+<image src="../../images/appointmentbg.jpg" style="opacity:{{0.2}}"></image>
+<view class="body">
+<van-tabs active="{{ active }}" color="#87bf82"> 
+  <van-tab title="预约回收" >
+  <view class="logo"><image class="logo" src="../../images/logo.jpg" mode="aspectFit"></image></view>
+  <!-- <view class="steps"><van-steps
+  steps="{{ steps }}"
+  active="4"
+  active-icon="success" 
+  active-color="#87bf82"
+  custom-class="step"
+/></view> -->
+   <view class='card'>
+    <view class="section">
+      <picker bindchange="bindPickerChangeA" value="{{indexA}}" range="{{array}}">
+        <view class="picker">
+          <text decode="{{true}}"> &emsp;&emsp;类别：</text>
+          <text class="t1">{{array[indexA]}}</text>
+        </view>
+      </picker>
+    </view>
+    <view class="section" wx:if="{{indexA <=1}}">
+      <picker bindchange="bindPickerChangeB" value="{{indexB}}" range="{{number}}">
+        <view class="picker">
+          <text decode="{{true}}"> &emsp;&emsp;数量：</text>
+          <text class="t1">{{number[indexB]}}</text>
+          <text class="t2">(一本书籍10羽毛值)</text>
+        </view>
+      </picker>
+    </view>
+    <view class="section" wx:if="{{indexA ==2}}">
+      <picker bindchange="bindPickerChangeC" value="{{indexC}}" range="{{number2}}">
+        <view class="picker">
+          <text decode="{{true}}"> &emsp;&emsp;数量：</text>
+          <text class="t1">{{number2[indexC]}}</text>
+           <text class="t2">(一斤衣物20羽毛值)</text>
+        </view>
+      </picker>
+    </view> 
+     <view class="section" wx:if="{{indexA ==3}}">
+      <picker bindchange="bindPickerChangeD" value="{{indexD}}" range="{{number3}}">
+        <view class="picker">
+          <text decode="{{true}}"> &emsp;&emsp;数量：</text>
+          <text class="t1">{{number3[indexD]}}</text>
+           <text class="t2">(一斤纸壳2羽毛值)</text>
+        </view>
+      </picker>
+    </view> 
+   
+    <view class="section1">
+  <picker mode="date" value="{{date}}" start="2019-09-01" end="2020-09-01" bindchange="bindDateChange">
+    <view class="picker1" >
+     <text decode="{{true}}"> &emsp;&emsp;时间：</text>
+          <text class="t1">{{date}}</text>
+    </view>
+  </picker>
+</view>
+<view class="section2">
+  <picker mode="time" value="{{time}}" start="09:00" end="21:00" bindchange="bindTimeChange">
+    <view class="picker2">
+      {{time}}
+    </view>
+  </picker>
+</view>
+ <view class="section3">
+  <view class="picker">
+        <text class="txt" decode="{{true}}"> &emsp;&emsp;地址：</text>
+        <input class="textarea3" placeholder="（例如：南区42栋）" value="{{address}}" bindblur="address"></input>
+      </view>
+      <!-- <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <view class="picker">
+          <text decode="{{true}}"> &emsp;&emsp;地址：</text>
+          <text class="t1">{{multiArray[0][multiIndex[0]]}}—{{multiArray[1][multiIndex[1]]}}</text>
+        </view>
+      </picker> -->
+    </view>
+    <view class="section">
+      <view class="picker">
+        <text class="txt" decode="{{true}}"> &emsp;&emsp;手机：</text>
+        <input class="textarea1" placeholder="请输入手机号码" value="{{tel}}" bindblur="aa"></input>
+      </view>
+    </view>
+    <view class="section">
+      <view class="picker">
+        <text class="txt" decode="{{true}}" > &emsp;&emsp;Q Q：</text>
+        <input class="textarea2" placeholder="请输入QQ号码" value="{{qq}}"  bindblur="bb"></input>
+      </view>
+    </view>
+  </view>
+   
+  <view class='container'>
+    <button class='button' bindtap='buttonTap'>提交</button>
+    <modal hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel">
+      <view>恭喜你，预约成功</view>
+    </modal>
+  </view>
+  <!-- <view class="im"><image src="../../images/c1.jpg" class="imagesa"></image></view> -->
+  </van-tab>
+  <van-tab title="自助回收">
+  <van-search value="{{ value }}" placeholder="输入地址" bindtap="search"/>
+  <view class="returnAddress"><image class="return" src="../../images/dh2.png" bindtap="returnAddress"></image></view>
+  <map longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" covers="{{covers}}" 
+  show-location style="width: 100%; height: 800rpx;" zIndex="1">
+  </map>
+  <view  class="scan">
+  <view class="bgimage" bindtap="scan">
+  <image src="../../images/scan.png" style="width:80rpx;height:80rpx; margin-top:-20rpx;"></image>
+  <view class="wz" >扫码使用回收机</view>
+  </view>
+  </view>
+  </van-tab>
+</van-tabs>
+<!-- <view class="blank"></view> -->
+</view>

@@ -1,0 +1,114 @@
+<view class="background">
+
+
+<!--导航条-->
+<view class="Navigation">
+  <view wx:for="{{Navigation}}" data-idx="{{index}}" 
+  class="item {{currentTab==index ? 'active' : ''}}" 
+  wx:key="{{index}}" bindtap="NavigationTap">{{item}}</view>
+ </view>
+
+ 
+<!--宝贝详情-->
+<view hidden="{{currentTab!==0}}">
+ <swiper indicator-dots autoplay circular indicator-color="#FFFFFF" indicator-active-color="#87BF82" interval="3000" style="margin-top:100rpx;">
+<swiper-item><image src="../../../images/bg1.jpg" mode="heightFix"></image></swiper-item>
+<swiper-item><image src="../../../images/bg2.jpg" mode="heightFix"></image></swiper-item>
+<swiper-item><image src="../../../images/bg3.jpg" mode="heightFix"></image></swiper-item>
+<swiper-item><image src="../../../images/bg4.jpg" mode="heightFix"></image></swiper-item>
+<!-- <swiper-item><image src="../../../images/bg5.png" mode="widthFix"></image></swiper-item> -->
+</swiper>
+<view class="FeatherValue">
+<image src="../../../images/Feather.png" mode="widthFix"class="images-Feather"></image>
+<text decode>&nbsp;&nbsp;{{FeatherValue}}&nbsp;羽毛值</text>
+<view class='number'>{{number}}</view>
+</view>
+<view class="ProductDetails">
+<image class="image1" src="../../../images/tu1.jpg" mode="scaleToFill"></image>
+<image class="image1" src="../../../images/tu2.jpg" mode="scaleToFill"></image>
+<image class="image1" src="../../../images/tu3.jpg" mode="scaleToFill"></image>
+<image class="image1" src="../../../images/tu4.jpg" mode="scaleToFill"></image>
+</view>
+<van-goods-action>
+  <van-goods-action-icon
+    icon="chat-o"
+    text="客服"
+    bind:click="onClickIcon"
+  />
+  <van-goods-action-icon
+    icon="cart-o"
+    text="购物车"
+    bind:click="onClickIcon"
+    info="5"
+  />
+  <van-goods-action-button
+    text="加入购物车"
+    type="warning"
+    bind:click="onClickButton"
+  />
+  <van-goods-action-button
+    text="立即购买"
+    bind:click="onClickButton"
+  />
+</van-goods-action>
+ <!-- <button class="butn" bindtap="showBuyModal">立即领取</button> -->
+</view>
+<!-- <view class="cover_screen" bindtap="hideBuyModal" wx:if="{{showModalStatus}}"></view>
+        <view animation="{{animationData}}" class="exchange_box" wx:if="{{showModalStatus}}">
+        <van-stepper value="{{1}}"  bind:change="onChange" bindinput="onInput"/>
+        </view> -->=
+<!--科普大世界-->
+
+
+<view hidden="{{currentTab!==1}}">
+
+<view class='top'>
+<view class='name'>塑料瓶</view>
+</view>
+
+<view class="middle">
+    <view class="middle-card">
+        <view class='middle-group'>
+            <view class="circular">
+               <text class="kind">可回收</text>
+            </view>
+            <view class="circular">
+               <text class="kind">可回收</text>
+            </view>
+            <view class="circular">
+               <text class="kind">可回收</text>
+            </view>
+            <view class="circular">
+               <text class="kind">可回收</text>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+<view class='bottom'>
+
+<view class="bottom-content">
+ <view class="headline">
+    <text>
+    {{line}}
+      <text class="p">{{headline}}</text>
+    {{line}}
+    </text>
+ </view>
+
+<view class="PlasticBottles_word">
+  <text>{{PlasticBottles_word}}</text>
+</view>
+<view class="PlasticBottles_img">
+  <image src="../../../images/PlasticBottles.jpg"></image>
+  <view class="action">
+    <text>{{action}}</text>
+  </view>
+</view>
+
+</view>
+</view>
+</view>
+ 
+</view>

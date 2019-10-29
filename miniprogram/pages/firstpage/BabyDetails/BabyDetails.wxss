@@ -1,0 +1,243 @@
+.background{
+  background-color:white;
+}
+.top{
+  background:#87bf82;
+  height:80px;
+  margin-top:50rpx;
+  padding-top:20rpx;
+  display: flex;
+}
+.middle{
+  height:200px;
+  background:white;
+  display: flex;
+}
+.bottom{
+  background:#B5E9A1;
+  height:500px;
+  margin-top:-110px;
+  display: flex;
+} 
+.backarrow {
+  width: 60rpx;
+  height: 60rpx;
+}
+.Navigation {
+  height: 35px;
+  width: 100%;
+  line-height: 35px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-bottom: 30rpx;
+  background:#fff;
+  color:rgb(122, 122, 122) ;
+  position: fixed;
+  z-index: 2;
+  flex-direction: row;
+  align-items: center;
+  /* border-bottom:1px solid #87BF82; */
+}
+.Navigation .item {
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+}
+.Navigation .item.active {
+  color: #292828;
+  font-size: 30rpx;
+  border-bottom: 2px solid #87bf82;
+}
+
+image {
+  width: 90%;
+  margin-left: 5%;
+}
+.FeatherValue {
+  width: 90%;
+  height: 80rpx;
+  margin: 0 auto;
+  font-size: 24rpx;
+  line-height: 70rpx;
+  display: flex;
+  align-content: center;
+}
+.images-Feather {
+  width: 80rpx;
+  margin-left: -10rpx;
+}
+.number {
+  margin: 0 0 0 350rpx;
+  color: #87bf82;
+}
+.ProductDetails {
+  width: 90%;
+  margin: 0 auto;
+  height: 800rpx;
+}
+.Title {
+  /* display: flex;
+  align-items: center; */
+  width: 90%;
+  margin: auto;
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+  text-align: center;
+}
+.protection {
+  float: left;
+  width: 50rpx;
+}
+.product_words {
+  margin-right: 70rpx;
+}
+
+.information {
+  background-color: #87bf82;
+  width: 85%;
+  line-height: 50rpx;
+  color: white;
+  margin: 0 auto;
+  font-size: 24rpx;
+  border: 1px solid rgb(213, 213, 214);
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.headline {
+  margin-top: 40rpx;
+  font-size: 32rpx;
+  text-align: center;
+  color: #87bf82;
+}
+.information {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 85%;
+  border-radius: 5px;
+}
+.information:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+img {
+  border-radius: 5px 5px 0 0;
+}
+.container {
+  padding: 2px 16px;
+}
+.butn {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #87bf82;
+  color: #fff;
+  border-radius: 10px;
+  line-height: 80rpx;
+  height: 80rpx;
+}
+.cover_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+.exchange_box {
+  width: 100%;
+  height:500rpx;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  /* z-index: 2000; */
+  background: #fff;
+  padding: 20rpx;
+}
+/**科普大世界上部分**/
+.cash_kind{
+width:155px;
+height:150px;
+margin:50rpx 0 0 230rpx;
+}
+.name{
+height: 50rpx;
+margin-left:315rpx;
+color:white;
+font-size:20px;
+padding-bottom: 30rpx;
+}
+.intro{
+  width:150rpx;
+  height:150rpx;
+  margin:0 0 150rpx -450rpx;
+}
+.word_intro{
+  font-size:10px;
+  margin:-550rpx 0 0 -100rpx;
+}
+/**科普大世界中间**/
+.middle-card{
+  height:200px;
+  width:90%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 140rpx auto;
+  border-radius: 5px;
+  background-color: white;
+  margin-top:-90rpx;
+  text-align:center;
+}
+.middle-group{
+  height:60px;
+  display:flex;
+  margin:65px 0 0 50px;
+}
+.circular{
+  flex-direction:row;
+  border-radius: 30px;
+  width:60px;
+  height:60px;
+  background-image: linear-gradient(to top,#B5E9A1,#87BF82);
+  display:flex;
+}
+.kind{
+  color:white;
+  font-size:13px;
+  margin:20px 0 0 10px;
+}
+
+/**科普大世界下部分**/
+.bottom-content{
+  margin-top:50px;
+}
+.PlasticBottles_word {
+  width: 85%;
+  padding-bottom: 10rpx;
+  margin: 10rpx auto;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  text-indent: 2em;
+}
+.action {
+  width: 85%;
+  margin: 0 auto;
+  font-size: 24rpx;
+}
+.p{
+  color:black;
+  width:100px;
+  height:50px;
+  margin:0 auto;
+  font-size:16px;
+}
+.image1{
+  width: 90%;
+  height: 700rpx;
+}

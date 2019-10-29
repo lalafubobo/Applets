@@ -1,0 +1,271 @@
+.set_color{
+  background:white;
+}
+.background{
+  height:550rpx;
+  width:100%;
+  background-image: linear-gradient(to top,#B5E9A1,#87BF82);
+  font-size:15px;
+}
+.value{
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  position: absolute;
+  font-size:50px;
+  color:rgb(139, 139, 139);
+  top:150rpx;
+  left: 235rpx;
+  text-align: center;
+  width: 300rpx;
+  height:150rpx;
+}
+/**波浪特效**/
+@keyframes rotate {
+	50% {
+		transform: translate(-50%, -73%) rotate(180deg);
+	} 100% {
+		transform: translate(-50%, -70%) rotate(360deg);
+	}
+}
+.wave_1:before,.wave_1:after{
+	content: "";
+	position: absolute;
+	width: 400rpx;
+	height: 400rpx;
+  margin:300rpx 0 0 390rpx;
+	background-color: rgba(255, 255, 255, .2);
+	border-radius: 45%;
+	transform: translate(-50%, -70%) rotate(0);
+	animation: rotate 4s linear infinite;
+}
+.wave_2:before,.wave_2:after{
+	content: "";
+	position: absolute;
+	width: 330rpx;
+	height: 330rpx;
+  margin:290rpx 0 0 390rpx;
+	background-color: rgba(255, 255, 255, .3);
+	border-radius: 43%;
+	transform: translate(-50%, -70%) rotate(0);
+	animation: rotate 8s linear infinite;
+}
+.customer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width:90%;
+  height:180rpx;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 0rpx auto;
+  margin-top: -80rpx; 
+  border-radius: 5px;
+  background-color: white;
+}
+.c1{
+background: #ccc;
+width:150rpx;
+height:150rpx;
+float: left;
+border-radius: 50%;
+overflow: hidden;
+}
+/* .c2{
+width: 100rpx;
+height: 50rpx;
+}
+.c3{
+  float: right;
+  margin-right: 20rpx;
+} */
+.c123{
+  font-size:14px;
+}
+.userNickName{
+   font-size:14px;
+   
+}
+/* pages/myInfo/myInfo.wxss */
+.container{
+  display: flex;
+}
+.icon{
+  width: 15%;
+  height:30px;
+  padding:45rpx;
+}
+.icon-group{
+  width: 100%;
+  height:100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-group{
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+}
+.like-button{
+  display: block;
+  width: 15%;
+  color:#ccc;
+  font-size: 12px;
+  margin-left: 15rpx;
+  text-align: center;
+}
+.like-button:last-child {
+  margin-right:15rpx;
+ }
+.button-active{
+  /* background-color: #87BF82; */
+  border-bottom: 2rpx #87BF82 solid;
+}
+.view-card{
+  margin-top: 20px;
+  border-top: 3px solid #87BF82;
+  padding-top: 5px;
+  width: 96%;
+}
+.swit{
+  width: 100%;
+}
+.wait-goods-card{
+  float: flet;
+  padding: 20rpx;
+  height: 95px;
+  border-bottom:1px solid #ccc;
+}
+.goods-pic{
+  position: relative;
+  width: 90px;
+  height: 90px;
+}
+.goods-name{
+ position: relative;
+ margin:0 0 0 200rpx;
+}
+.change-info{
+position: relative;
+margin: -40rpx 0 0 40rpx;
+font-size:16px;
+}
+.situation{
+  color: rgb(248, 132, 82);
+}
+.a-cash-coupon{
+  height: 100px;
+}
+.shop{
+  position: relative;
+  width: 90px;
+  height: 90px;
+}
+.shop-pic{
+  width: 65px;
+  height: 65px;
+}
+.new-cash-coupon{
+  position: relative;
+  left: 90px;
+  top: -50px;
+  color: rgb(248, 132, 82);
+}
+.cash-name{
+  position: relative;
+  margin:-100rpx 0 0 200rpx;
+  width:150rpx;
+  height:100rpx;
+}
+.money-info{
+  position: relative;
+  left: 180px;
+  top: -100px;
+}
+.value-money{
+  font-size: 25px;
+  color: #87BF82;
+  margin:0 0 0 280rpx;
+}
+.use-date-limted{
+  margin:0 0 0 120rpx;
+}
+.use-date-limted-text{
+  color: red;
+    margin:0 0 0 60rpx;
+}
+.out-limted-cash-coupon{
+  height: 20px;
+  border-top: 2px solid #ddd;
+  font-size: 20xp;
+}
+.out-time{
+  background-color: #ddd;
+}
+.wait-pickup-card-title{
+  position: relative;
+}
+.order-time{
+  position: relative;
+  left: 30px;
+  color:#87BF82;
+}
+.order-state{
+  position: relative;
+  left: 30px;
+}
+.order-text{
+  position: relative;
+  left: 30px;
+  font-size: 13px;
+}
+.deal-time{
+  position: relative;
+  left: 130px;
+  font-size: 12px;
+}
+
+/**底部**/
+.anotherway{
+  margin:-500px 0 0 30px;
+}
+.words{
+  color:#ccc;
+  font-size:12px;
+  margin:-65rpx 0 0 500rpx;
+}
+.bottom{
+width:100%;
+margin:-20rpx 0 0 0;
+}
+.mybottom{
+  width:100%;
+  font-size:14px;
+  line-height: 70rpx;
+  height:70rpx;
+  margin:48rpx 0 0 0;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+
+}
+
+
+
+
+
+
+/* .wait-goods{
+  animation: menudown 3s;
+} */
+
+/* @keyframes menudown {
+    from {
+        height: 0rpx;
+    }
+    to {
+        height: 210rpx;
+    }
+} */
+
